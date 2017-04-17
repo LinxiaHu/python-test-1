@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/justfortest/justfortest.iml" filepath="$PROJECT_DIR$/justfortest/justfortest.iml" />
       <module fileurl="file://$PROJECT_DIR$/python-test-1.iml" filepath="$PROJECT_DIR$/python-test-1.iml" />
     </modules>
   </component>
