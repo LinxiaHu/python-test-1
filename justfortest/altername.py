@@ -1,11 +1,13 @@
+#coding=utf-8
 import re
 import os
 import time
 
 
 def changeName(path):
+    print 'entrance the method'
     global i
-    if not os.path.isdir(path) and os.path.isfile(path):
+    if not os.path.isdir(path) and not os.path.isfile(path):
         return False
     if os.path.isfile(path):
         file_path = os.path.split(path)
@@ -13,6 +15,7 @@ def changeName(path):
         file_ext = lists[-1]  # 取出后缀名(列表切片操作)
         img_ext = ['bmp', 'jpeg', 'gif', 'psd', 'png', 'jpg']
         if file_ext in img_ext:
+            print file_ext
             os.rename(path, file_path[0] + '/' + lists[0] + '_fc.' + file_ext)
             i += 1  # 注意这里的i是一个陷阱
             # 或者
@@ -24,7 +27,7 @@ def changeName(path):
             changeName(os.path.join(path, x))  # os.path.join()在路径处理上很有用
 
 
-img_dir = 'D:\\xx\\xx\\images'
+img_dir = 'C:\\justtest\\images'
 img_dir = img_dir.replace('\\', '/')
 start = time.time()
 i = 0
