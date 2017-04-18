@@ -6,7 +6,7 @@ import time
 
 def changeName(path):
     global i
-    if not os.path.isdir(path) and os.path.isfile(path):
+    if not os.path.isdir(path) and not os.path.isfile(path):
         return False
     if os.path.isfile(path):
         file_path = os.path.split(path)
